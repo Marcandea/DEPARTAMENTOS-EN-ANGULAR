@@ -24,10 +24,11 @@
    <h2 class="title">Departamentos</h2>
     <div ng-repeat="project in projectList.projects">
         <ul>
+         <img ng-src="{{project.imagen}}" >
          <p>{{project.precio}}</p>
          <p>{{project.ubicacion}}</p>
          <p>{{project.detalles}}</p>
-         
+
         </ul>
     </div>
 
