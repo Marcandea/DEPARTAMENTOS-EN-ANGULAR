@@ -1,3 +1,6 @@
+<h3>{{editProject.msg}}</h3>
+<button ng-click="editProject.hello()" type="">Click me!</button>
+
 <form name="myForm">
   <div class="control-group" ng-class="{error: myForm.name.$invalid && !myForm.name.$pristine}">
     <label>Name</label>
@@ -25,3 +28,4 @@
   <button ng-click="editProject.destroy()"
           ng-show="editProject.project.$id" class="btn btn-danger">Delete</button>
 </form>
+

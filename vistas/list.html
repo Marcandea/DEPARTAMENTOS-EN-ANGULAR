@@ -1,12 +1,9 @@
-
 <input type="text" ng-model="projectList.search" class="search-query" id="projects_search" placeholder="Search">
 
 <div class="row">
-<div ng-repeat="project in projectList.projects">
-
-  <div class="col s1">
-  </div>
-  <div class="col s12 l5">
+  <div ng-repeat="project in projectList.projects">
+    <div class="col s1"></div>
+    <div class="col s12 l5">
     <h2 class="header">Horizontal Card</h2>
     <div class="card horizontal">
       <div class="card-image">
@@ -14,17 +11,15 @@
       </div>
       <div class="card-stacked">
         <div class="card-cxontent">
-       <p>{{project.precio}}</p>
-         <p>{{project.ubicacion}}</p>
-         <p>{{project.detalles}}</p>
+          <p>{{project.precio}}</p>
+          <p>{{project.ubicacion}}</p>
+          <p>{{project.detalles}}</p>
         </div>
-        <div class="card-action">
+      <div class="card-action">
           <a href="#">This is a link</a>
-        </div>
+      </div>
       </div>
     </div>
   </div>
 </div>
 </div>
-
-
