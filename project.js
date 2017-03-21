@@ -48,10 +48,17 @@ angular.module('project', ['ngRoute' ])
 })
  
 .controller('NewProjectController', function($location, projects) {
-  var editProject = this;
-  editProject.hello = function() {
-      alert('esto es un mensaje');
+  var project = this;
+  project.departamento = {
+    precio: 15000,
+    ubicacion: "Zona norte: Av. America - Este",
+    detalles: "Cuenta con una sala, cocina, y 2 baños",
+    lat: -17.374087,
+    lon: -66.138679,
+    tipoP: "Contado",
+    numhab: 3,
+    imagen: "fotos/depa1.jpg"
   };
-  editProject.msg = "esto es un mensaje";
+
 }) 
 ;
