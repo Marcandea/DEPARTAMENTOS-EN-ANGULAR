@@ -4,7 +4,7 @@
   <div ng-repeat="project in projects">
     <div class="col s1"></div>
     <div class="col s12 l5">
-    <h2 class="header">Horizontal Card</h2>
+    <h2 class="header">CARD</h2>
     <div class="card horizontal">
       <div class="card-image">
         <img ng-src="{{project.imagen}}" >
@@ -14,10 +14,9 @@
           <p>{{project.precio}}</p>
           <p>{{project.ubicacion}}</p>
           <p>{{project.detalles}}</p>
-          <p>project</p>
         </div>
       <div class="card-action">
-          <a href="#">This is a link</a>
+          <a ng-click="redireccionar(project.id)">VER MÁS DETALLES</a>
       </div>
       </div>
     </div>

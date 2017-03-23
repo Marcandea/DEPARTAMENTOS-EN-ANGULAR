@@ -22,7 +22,7 @@ angular.module('project', ['ngRoute' ])
     });
 })
  
-.controller('ProjectListController', function(projects, $scope) {
+.controller('ProjectListController', function(projects, $scope, $log, $window) {
   var projectList = this;
   $scope.projects = [
   {
@@ -47,10 +47,17 @@ angular.module('project', ['ngRoute' ])
     numhab: 4,
     imagen: "fotos/depa2.jpg"
   }]; 
+
+  $scope.redireccionar = function(id){
+    var url = "http://" + $window.location.host+'#!/' + id;
+        $log.log(url);
+        $window.location.href = url;
+  };
+
 })
  
 
-.controller('NewProjectController', function($location, $scope, $routeParams) {
+.controller('NewProjectController', function($location, $scope, $routeParams,  $log, $window) {
   var projects = [
   {
     id: 1,
@@ -73,7 +80,7 @@ angular.module('project', ['ngRoute' ])
     tipoP: "Credito",
     numhab: 4,
     imagen: "fotos/depa2.jpg"
-  }]; 
+  }];
 
   var buscar = function(parametro, lista){
     for(i=0;i<lista.length;i++){
@@ -84,5 +91,13 @@ angular.module('project', ['ngRoute' ])
   };
 
   $scope.departamento = buscar($routeParams.id, projects);
+
+  $scope.ATRAS = function(){
+    var url = 'http://localhost:8887/';
+        $log.log(url);
+        $window.location.href = url;
+  };
+
+
 }) 
 ;
