@@ -1,17 +1,16 @@
 <input type="text" ng-model="projectList.search" class="search-query" id="projects_search" placeholder="Search">
+<div class="container">       
 
 <div class="row">
   <div ng-repeat="project in projects">
-    <div class="col s1"></div>
-    <div class="col s12 l5">
-    <h2 class="header">CARD</h2>
+    <div class="col s12 l10">
     <div class="card horizontal">
       <div class="card-image">
         <img ng-src="{{project.imagen}}" >
       </div>
       <div class="card-stacked">
         <div class="card-cxontent">
-          <p>{{project.precio}}</p>
+          <h5>{{project.precio}} Bs.</h5>
           <p>{{project.ubicacion}}</p>
           <p>{{project.detalles}}</p>
         </div>
@@ -21,5 +20,6 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 </div>
