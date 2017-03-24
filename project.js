@@ -92,13 +92,4 @@ angular.module('project', ['ngRoute' ])
   };
 
   $scope.departamento = buscar($routeParams.id, projects);
-
-  $scope.ATRAS = function(){
-    var url = "http://" + $window.location.host;
-        $log.log(url);
-        $window.location.href = url;
-  };
-
-
-}) 
-;
+}) ;
