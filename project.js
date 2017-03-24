@@ -22,7 +22,7 @@ angular.module('project', ['ngRoute' ])
     });
 })
  
-.controller('ProjectListController', function(projects, $scope, $log, $window) {
+.controller('ProjectListController', function(projects, $scope, $log, $window,$location) {
   var projectList = this;
   $scope.projects = [
   {
@@ -49,9 +49,10 @@ angular.module('project', ['ngRoute' ])
   }]; 
 
   $scope.redireccionar = function(id){
-    var url = "http://" + $window.location.host+'#!/' + id;
-        $log.log(url);
-        $window.location.href = url;
+    console.log();
+    var url = $window.location.href + id;
+    $log.log(url);
+    $window.location.href = url;
   };
 
 })
@@ -93,7 +94,7 @@ angular.module('project', ['ngRoute' ])
   $scope.departamento = buscar($routeParams.id, projects);
 
   $scope.ATRAS = function(){
-    var url = 'http://localhost:8887/';
+    var url = "http://" + $window.location.host;
         $log.log(url);
         $window.location.href = url;
   };

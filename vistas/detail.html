@@ -1,19 +1,21 @@
 
 <div class="row">
-    <div class="col s6">This div is 6-columns wide 
+    <div class="col s12 l6">
       <img class="materialboxed" data-caption="A picture of some deer and tons of trees" width="500" ng-src="{{departamento.imagen}}">
     </div>
-    
-      <h5 class="Departamento">{{departamento.precio}}</h5>
+    <div class="col s12 l6">
+
+      <h3 class="Departamento">{{departamento.precio}} Bs</h3>
         <h4 class="Departamento">{{departamento.ubicacion }}</h4>
           <p>{{departamento.detalles }}</p>
           <p>{{departamento.lat }}</p>
           <p>{{departamento.lon }}</p>
           <p>{{departamento.numhub }}</p>
           <p>{{departamento.tipoP }}</p>
+    </div>
 
 </div>
 
-<button ng-click="ATRAS()">
+<button class="waves-effect waves-light btn" ng-click="ATRAS()">
   ATRAS
 </button>
